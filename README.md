@@ -13,6 +13,7 @@ I really like  basketball 🏀, fluid dynamics 🌊, and ML 🤖.
 
 ### 💻 Languages and Tools
 
+**Languages & Frameworks**
 <p align="left">
   <a href="https://www.cplusplus.com/" target="_blank" rel="noreferrer">
     <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="cplusplus"/>
@@ -37,6 +38,23 @@ I really like  basketball 🏀, fluid dynamics 🌊, and ML 🤖.
   </a>
 </p>
 
----
+**Software & Libraries**
+<p align="left">
+  <a href="https://openfoam.org/" target="_blank" rel="noreferrer">
+    <img src="https://img.shields.io/badge/OpenFOAM-002C6A?style=for-the-badge&logoColor=white" alt="OpenFOAM"/>
+  </a>
+  <a href="https://www.ansys.com/" target="_blank" rel="noreferrer">
+    <img src="https://img.shields.io/badge/ANSYS-FFB71B?style=for-the-badge&logoColor=black" alt="ANSYS"/>
+  </a>
+  <a href="https://www.flow3d.com/" target="_blank" rel="noreferrer">
+    <img src="https://img.shields.io/badge/FLOW--3D-00AEEF?style=for-the-badge&logoColor=white" alt="FLOW-3D"/>
+  </a>
+  <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer">
+    <img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="pandas"/>
+  </a>
+  <a href="https://pytorch.org/" target="_blank" rel="noreferrer">
+    <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch"/>
+  </a>
+</p>
 
 
