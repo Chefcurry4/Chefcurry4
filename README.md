@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-I'm Chefcurry4, a passionate developer with a love for basketball 🏀, the fascinating world of fluid dynamics 🌊, and the ever-evolving field of machine learning 🤖.
+I really like  basketball 🏀, fluid dynamics 🌊, and ML 🤖.
 
 <p align="center">
   <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDA0Z2d6eDB0cWd6eGRtMWgyZzR0b2s5d2xnM3g0cmN6b245MmdrZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L1V2lo1dE01pu/giphy.gif" width="600" />
@@ -51,5 +51,6 @@ I'm Chefcurry4, a passionate developer with a love for basketball 🏀, the fasc
 ### 📫 How to reach me:
 
 You can find me on my [GitHub](https://github.com/Chefcurry4) profile.
+
 
 ---
