@@ -2,40 +2,12 @@
 
 I really like  basketball 🏀, fluid dynamics 🌊, and ML 🤖.
 
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-  <style>
-    #killer-whale-body {
-      /* Animation: name duration timing-function iteration-count */
-      animation: swim 6s ease-in-out infinite;
-      transform-origin: center;
-    }
+<p align="center">
+  <a href="https://github.com/Chefcurry4">
+    <img src="killer-whale.svg" width="200" alt="Animated Killer Whale"/>
+  </a>
+</p>
 
-    @keyframes swim {
-      0% {
-        transform: translateY(0px) rotate(-2deg);
-      }
-      50% {
-        transform: translateY(15px) rotate(2deg);
-      }
-      100% {
-        transform: translateY(0px) rotate(-2deg);
-      }
-    }
-  </style>
-  <g id="killer-whale-body">
-    <!-- Body -->
-    <path fill="#000000" d="M100,50 C 50,50 30,100 30,120 S 50,160 100,160 S 170,140 170,120 S 150,50 100,50 Z"/>
-    <!-- White Patch -->
-    <path fill="#FFFFFF" d="M95,120 Q 80,110 90,95 C 100,80 120,85 125,100 Q 130,115 115,125 Z"/>
-    <!-- Eye Patch -->
-    <ellipse fill="#FFFFFF" cx="130" cy="90" rx="8" ry="5"/>
-    <!-- Tail -->
-    <path fill="#000000" d="M30,120 C 10,110 10,140 30,130 L 30,120 Z"/>
-    <path fill="#000000" d="M30,120 C 10,130 10,160 30,150 L 30,120 Z"/>
-    <!-- Fin -->
-    <path fill="#000000" d="M100,80 C 110,70 120,75 120,90 L 100,100 Z"/>
-  </g>
-</svg>
 
 ---
 
@@ -66,4 +38,5 @@ I really like  basketball 🏀, fluid dynamics 🌊, and ML 🤖.
 </p>
 
 ---
+
 
