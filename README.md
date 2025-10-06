@@ -35,22 +35,3 @@ I really like  basketball 🏀, fluid dynamics 🌊, and ML 🤖.
 </p>
 
 ---
-
-### 🚀 My Interests
-
-*   **Basketball:** I'm a huge basketball fan! I enjoy both playing and following the sport. 🏀
-*   **Fluid Dynamics:** I'm fascinated by the physics of fluids. I enjoy exploring simulations and understanding the complex behaviors of liquids and gases.
-
-    <p align="center">
-      <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGNzbjJnMjA1c2Z0bXdoY3Y5MWQ4eXo4a2x6eXo2dDYzZ2d5b3VpYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT0BKG23StPQoX6LqU/giphy.gif" width="600" />
-    </p>
-*   **Machine Learning:** I am passionate about the potential of machine learning to solve real-world problems. I'm always learning about new algorithms and techniques.
-
----
-
-### 📫 How to reach me:
-
-You can find me on my [GitHub](https://github.com/Chefcurry4) profile.
-
-
----
