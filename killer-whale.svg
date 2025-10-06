@@ -32,3 +32,65 @@
     <path fill="#000000" d="M100,80 C 110,70 120,75 120,90 L 100,100 Z"/>
   </g>
 </svg>
+
+
+
+<svg width="250" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 200">
+  <style>
+    .whale-body {
+      animation: swim 4s ease-in-out infinite;
+      transform-origin: 125px 100px; /* Animate around the center */
+    }
+    .tail {
+      animation: flap 1s ease-in-out infinite;
+      transform-origin: 210px 105px; /* Animate where tail joins body */
+    }
+
+    @keyframes swim {
+      0% {
+        transform: translateY(0px) rotate(-1deg);
+      }
+      50% {
+        transform: translateY(10px) rotate(1deg);
+      }
+      100% {
+        transform: translateY(0px) rotate(-1deg);
+      }
+    }
+
+    @keyframes flap {
+      0% {
+        transform: rotate(-5deg);
+      }
+      50% {
+        transform: rotate(5deg);
+      }
+      100% {
+        transform: rotate(-5deg);
+      }
+    }
+  </style>
+
+  <g class="whale-body">
+    <!-- Main Body -->
+    <path fill="#202124" d="M210,105 C190,90 100,70 50,95 C0,120 10,150 50,140 C100,130 190,120 210,105 Z"/>
+
+    <!-- White Underbelly and Chin Patch -->
+    <path fill="#FFFFFF" d="M195,110 C180,125 100,135 60,130 C40,128 35,115 40,105 C50,90 70,100 80,105 C100,110 180,115 195,110 Z"/>
+
+    <!-- White Eye Patch -->
+    <path fill="#FFFFFF" d="M65,95 C75,90 85,95 80,105 Z"/>
+
+    <!-- Dorsal Fin -->
+    <path fill="#202124" d="M120,78 C130,50 145,50 150,78 L140,78 C135,60 130,60 125,78 Z"/>
+
+    <!-- Pectoral Fin (Flipper) -->
+    <path fill="#202124" d="M110,120 C130,135 145,130 130,115 Z"/>
+
+    <!-- Tail (Flukes) -->
+    <g class="tail">
+      <path fill="#202124" d="M210,105 C240,90 250,100 230,110 Z"/>
+      <path fill="#202124" d="M210,105 C240,120 250,110 230,100 Z"/>
+    </g>
+  </g>
+</svg>
