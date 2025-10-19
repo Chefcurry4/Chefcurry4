@@ -57,4 +57,5 @@ I really like  basketball 🏀, fluid dynamics 🌊, and ML 🤖.
   </a>
 </p>
 
+![Isometric Commit Calendar](https://github.com/Chefcurry4/Chefcurry4/blob/main/metrics.plugin.isocalendar.svg)
 
