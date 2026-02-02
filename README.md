@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-I really like  basketball 🏀, fluid dynamics 🌊, and ML 🤖 :)
+I really like  basketball, fluid dynamics, ML, building <3  
 
 <p align="center">
   <a href="https://github.com/Chefcurry4">
@@ -52,6 +52,7 @@ I really like  basketball 🏀, fluid dynamics 🌊, and ML 🤖 :)
 </p>
 
 ![Isometric Commit Calendar](https://github.com/Chefcurry4/Chefcurry4/blob/main/metrics.plugin.isocalendar.svg)
+
 
 
 
