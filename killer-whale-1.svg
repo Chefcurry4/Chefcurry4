@@ -138,12 +138,6 @@
          C120,92 142,90 150,104
          C144,118 122,120 112,104 Z"/>
 
-    <!-- Tiny eye + blink -->
-    <g class="blink">
-      <circle cx="140" cy="106" r="2.6" fill="#111"/>
-      <circle cx="139.2" cy="105.2" r="0.9" fill="#fff" opacity="0.8"/>
-    </g>
-
     <!-- Gloss highlight -->
     <path fill="url(#shine)"
       d="M86,98
