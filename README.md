@@ -4,7 +4,7 @@ I really like  basketball, fluid dynamics, ML, building <3
 
 <p align="center">
   <a href="https://github.com/Chefcurry4">
-    <img src="hero.svg" width="600" alt="Animated grid behind killer whale" />
+    <img src="killer-whale.svg" width="200" alt="Animated killer whale" />
   </a>
 </p>
 
@@ -50,6 +50,7 @@ I really like  basketball, fluid dynamics, ML, building <3
 </p>
 
 ![Isometric Commit Calendar](https://github.com/Chefcurry4/Chefcurry4/blob/main/metrics.plugin.isocalendar.svg)
+
 
 
 
