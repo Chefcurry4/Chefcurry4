@@ -11,8 +11,6 @@ I really like  basketball, fluid dynamics, ML, building <3
 
 ---
 
----
-
 ### 🧰 Languages & Tools
 
 #### Languages
@@ -52,6 +50,7 @@ I really like  basketball, fluid dynamics, ML, building <3
 </p>
 
 ![Isometric Commit Calendar](https://github.com/Chefcurry4/Chefcurry4/blob/main/metrics.plugin.isocalendar.svg)
+
 
 
 
