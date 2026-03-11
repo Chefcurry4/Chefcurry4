@@ -1,7 +1,8 @@
 ### Hi there 👋
 
-I really like  basketball, fluid dynamics, ML <3  
+I really like  basketball(1), fluid dynamics(2), ML(3) <3  
 
+| (2) | (3) | (1) |
 | :--- | :----: | ----: |
 | <a href="https://github.com/Chefcurry4"><img src="killer-whale-1.svg" width="300" alt="Animated killer whale" /></a> | <a href="https://github.com/Chefcurry4"><img src="ai_system.svg" width="300" alt="AI system svg" /></a> | <a href="https://github.com/Chefcurry4"><img src="basketball.svg" width="300" alt="basketball svg" /></a>
 
