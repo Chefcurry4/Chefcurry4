@@ -2,23 +2,9 @@
 
 I really like  basketball, fluid dynamics, ML, building <3  
 
-<p align="center">
-  <a href="https://github.com/Chefcurry4">
-    <img src="killer-whale-1.svg" width="300" alt="Animated killer whale" />
-  </a>
-</p>
-
-<p align="right">
-  <a href="https://github.com/Chefcurry4">
-    <img src="ai_system.svg" width="300" alt="AI system svg" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/Chefcurry4">
-    <img src="basketball.svg" width="300" alt="baketball svg" />
-  </a>
-</p>
+| Left | Center | Right |
+| :--- | :----: | ----: |
+| <a href="https://github.com/Chefcurry4"><img src="killer-whale-1.svg" width="200" alt="Animated killer whale" /></a> | <a href="https://github.com/Chefcurry4"><img src="ai_system.svg" width="200" alt="AI system svg" /></a> | <a href="https://github.com/Chefcurry4"><img src="basketball.svg" width="200" alt="basketball svg" /></a>
 
 ---
 
@@ -61,6 +47,7 @@ I really like  basketball, fluid dynamics, ML, building <3
 </p>
 
 ![Isometric Commit Calendar](https://github.com/Chefcurry4/Chefcurry4/blob/main/metrics.plugin.isocalendar.svg)
+
 
 
 
