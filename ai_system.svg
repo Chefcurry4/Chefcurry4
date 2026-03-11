@@ -1,0 +1,109 @@
+<svg width="360" height="220" viewBox="0 0 360 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="aiBg" x1="0" y1="0" x2="360" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08111D"/>
+      <stop offset="1" stop-color="#140B29"/>
+    </linearGradient>
+
+    <linearGradient id="linkGrad" x1="52" y1="110" x2="308" y2="110" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="0.5" stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+
+    <radialGradient id="coreGrad" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(180 110) rotate(90) scale(44)">
+      <stop stop-color="#E0F2FE"/>
+      <stop offset="0.45" stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </radialGradient>
+
+    <filter id="aiGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="360" height="220" rx="24" fill="url(#aiBg)"/>
+
+  <!-- Outer rotating rings -->
+  <g transform="translate(180 110)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="14s" repeatCount="indefinite"/>
+      <circle cx="0" cy="0" r="60" stroke="#22D3EE" stroke-width="1.5" stroke-dasharray="10 8" opacity="0.5"/>
+      <circle cx="0" cy="0" r="82" stroke="#A78BFA" stroke-width="1.2" stroke-dasharray="6 10" opacity="0.4"/>
+    </g>
+  </g>
+
+  <g transform="translate(180 110)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="18s" repeatCount="indefinite"/>
+      <ellipse cx="0" cy="0" rx="112" ry="42" stroke="#38BDF8" stroke-width="1.2" opacity="0.28"/>
+    </g>
+  </g>
+
+  <!-- Network links -->
+  <g stroke="url(#linkGrad)" stroke-width="2" stroke-linecap="round" opacity="0.8">
+    <path d="M80 66L150 96"/>
+    <path d="M80 154L150 124"/>
+    <path d="M180 110L150 96"/>
+    <path d="M180 110L150 124"/>
+    <path d="M180 110L210 82"/>
+    <path d="M180 110L210 138"/>
+    <path d="M210 82L286 64"/>
+    <path d="M210 138L286 156"/>
+    <path d="M210 82L286 110"/>
+    <path d="M210 138L286 110"/>
+  </g>
+
+  <!-- Data packets -->
+  <circle r="4" fill="#67E8F9" filter="url(#aiGlow)">
+    <animateMotion dur="3.4s" repeatCount="indefinite">
+      <mpath href="#packet1"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" dur="3.4s" repeatCount="indefinite"/>
+  </circle>
+  <path id="packet1" d="M80 66L150 96L180 110L210 82L286 64" fill="none"/>
+
+  <circle r="4" fill="#C084FC" filter="url(#aiGlow)">
+    <animateMotion dur="4.1s" repeatCount="indefinite">
+      <mpath href="#packet2"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" dur="4.1s" repeatCount="indefinite"/>
+  </circle>
+  <path id="packet2" d="M80 154L150 124L180 110L210 138L286 156" fill="none"/>
+
+  <circle r="3.5" fill="#F8FAFC" filter="url(#aiGlow)">
+    <animateMotion dur="2.8s" repeatCount="indefinite">
+      <mpath href="#packet3"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+  <path id="packet3" d="M286 110L210 82L180 110L210 138L286 110" fill="none"/>
+
+  <!-- Nodes -->
+  <g filter="url(#aiGlow)">
+    <circle cx="80" cy="66" r="10" fill="#0EA5E9"/>
+    <circle cx="80" cy="154" r="10" fill="#0EA5E9"/>
+    <circle cx="150" cy="96" r="11" fill="#38BDF8"/>
+    <circle cx="150" cy="124" r="11" fill="#38BDF8"/>
+    <circle cx="210" cy="82" r="11" fill="#8B5CF6"/>
+    <circle cx="210" cy="138" r="11" fill="#8B5CF6"/>
+    <circle cx="286" cy="64" r="10" fill="#A78BFA"/>
+    <circle cx="286" cy="110" r="12" fill="#C084FC"/>
+    <circle cx="286" cy="156" r="10" fill="#A78BFA"/>
+  </g>
+
+  <!-- Core -->
+  <g filter="url(#aiGlow)">
+    <circle cx="180" cy="110" r="26" fill="url(#coreGrad)">
+      <animate attributeName="r" values="26;29;26" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="180" cy="110" r="38" stroke="#E0F2FE" stroke-width="1.5" opacity="0.75">
+      <animate attributeName="r" values="38;52;38" dur="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.75;0.12;0.75" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
