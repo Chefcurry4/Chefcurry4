@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-I really like  basketball(1), fluid dynamics(2), ML(3) <3  
+I really like  basketball (1), fluid dynamics (2), ML (3) <3  
 
 | (2) | (3) | (1) |
 | :--- | :----: | ----: |
@@ -47,6 +47,7 @@ I really like  basketball(1), fluid dynamics(2), ML(3) <3
 </p>
 
 ![Isometric Commit Calendar](https://github.com/Chefcurry4/Chefcurry4/blob/main/metrics.plugin.isocalendar.svg)
+
 
 
 
