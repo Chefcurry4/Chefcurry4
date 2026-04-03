@@ -1,10 +1,61 @@
-### Hi there 👋
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=500&lines=Basketball+%F0%9F%8F%80;Fluid+Dynamics+%F0%9F%8C%8A;Machine+Learning+%F0%9F%A4%96" alt="Typing SVG" />
+</p>
+
+### Hi there 👋 <img src="https://komarev.com/ghpvc/?username=Chefcurry4&color=blue&style=flat-square" alt="Profile views" />
 
 I really like  basketball (1), fluid dynamics (2), ML (3) <3  
 
 | (2) | (3) | (1) |
 | :--- | :----: | ----: |
 | <a href="https://github.com/Chefcurry4"><img src="killer-whale-1.svg" width="300" alt="Animated killer whale" /></a> | <a href="https://github.com/Chefcurry4"><img src="ai_system.svg" width="300" alt="AI system svg" /></a> | <a href="https://github.com/Chefcurry4"><img src="basketball.svg" width="300" alt="basketball svg" /></a>
+
+---
+
+### 📊 GitHub Stats
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=Chefcurry4&theme=tokyonight" alt="GitHub Streak" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Chefcurry4&show_icons=true&theme=tokyonight" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Chefcurry4&layout=compact&theme=tokyonight" alt="Top Languages" />
+</p>
+
+---
+
+### 🏆 Trophies
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=Chefcurry4&theme=onedark&margin-w=10&no-bg=true" alt="GitHub Trophies" />
+</p>
+
+---
+
+### 📈 Contribution Activity
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Chefcurry4&theme=tokyo-night" alt="Contribution Activity Graph" />
+</p>
+
+---
+
+### 📅 Isometric Commit Calendar
+
+![Isometric Commit Calendar](https://github.com/Chefcurry4/Chefcurry4/blob/main/metrics.plugin.isocalendar.svg)
+
+---
+
+### 🐍 Contribution Snake
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Chefcurry4/Chefcurry4/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Chefcurry4/Chefcurry4/output/github-contribution-grid-snake.svg" />
+    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/Chefcurry4/Chefcurry4/output/github-contribution-grid-snake.svg" />
+  </picture>
+</p>
 
 ---
 
@@ -45,8 +96,6 @@ I really like  basketball (1), fluid dynamics (2), ML (3) <3
   <img src="https://img.shields.io/badge/OpenFOAM-002C6A?style=for-the-badge" />
   <img src="https://img.shields.io/badge/FLOW--3D-00AEEF?style=for-the-badge" />
 </p>
-
-![Isometric Commit Calendar](https://github.com/Chefcurry4/Chefcurry4/blob/main/metrics.plugin.isocalendar.svg)
 
 
 
