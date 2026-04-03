@@ -4,8 +4,6 @@
 
 ### Hi there 👋 <img src="https://komarev.com/ghpvc/?username=Chefcurry4&color=blue&style=flat-square" alt="Profile views" />
 
-I really like  basketball (1), fluid dynamics (2), ML (3) <3  
-
 | (2) | (3) | (1) |
 | :--- | :----: | ----: |
 | <a href="https://github.com/Chefcurry4"><img src="killer-whale-1.svg" width="300" alt="Animated killer whale" /></a> | <a href="https://github.com/Chefcurry4"><img src="ai_system.svg" width="300" alt="AI system svg" /></a> | <a href="https://github.com/Chefcurry4"><img src="basketball.svg" width="300" alt="basketball svg" /></a>
@@ -21,22 +19,6 @@ I really like  basketball (1), fluid dynamics (2), ML (3) <3
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=Chefcurry4&show_icons=true&theme=tokyonight" alt="GitHub Stats" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Chefcurry4&layout=compact&theme=tokyonight" alt="Top Languages" />
-</p>
-
----
-
-### 🏆 Trophies
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Chefcurry4&theme=onedark&margin-w=10&no-bg=true" alt="GitHub Trophies" />
-</p>
-
----
-
-### 📈 Contribution Activity
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Chefcurry4&theme=tokyo-night" alt="Contribution Activity Graph" />
 </p>
 
 ---
