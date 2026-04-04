@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=500&lines=Basketball+%F0%9F%8F%80;Fluid+Dynamics+%F0%9F%8C%8A;Machine+Learning+%F0%9F%A4%96" alt="Typing SVG" />
-</p>
-
 ### Hi there 👋 <img src="https://komarev.com/ghpvc/?username=Chefcurry4&color=blue&style=flat-square" alt="Profile views" />
 
 | (2) | (3) | (1) |
