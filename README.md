@@ -1,4 +1,6 @@
-### Hi there 👋 <img src="https://komarev.com/ghpvc/?username=Chefcurry4&color=blue&style=flat-square" alt="Profile views" />
+### Hi there 👋 
+
+<img src="https://komarev.com/ghpvc/?username=Chefcurry4&color=blue&style=flat-square" alt="Profile views" />
 
 | (2) | (3) | (1) |
 | :--- | :----: | ----: |
