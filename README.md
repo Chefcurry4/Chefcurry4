@@ -1,7 +1,5 @@
 ### Hi there 👋 
 
-<img src="https://komarev.com/ghpvc/?username=Chefcurry4&color=blue&style=flat-square" alt="Profile views" />
-
 | (2) | (3) | (1) |
 | :--- | :----: | ----: |
 | <a href="https://github.com/Chefcurry4"><img src="killer-whale-1.svg" width="300" alt="Animated killer whale" /></a> | <a href="https://github.com/Chefcurry4"><img src="ai_system.svg" width="300" alt="AI system svg" /></a> | <a href="https://github.com/Chefcurry4"><img src="basketball.svg" width="300" alt="basketball svg" /></a>
