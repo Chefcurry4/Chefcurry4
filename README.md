@@ -6,19 +6,6 @@
 
 ---
 
-### 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com/?user=Chefcurry4&theme=tokyonight" alt="GitHub Streak" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Chefcurry4&show_icons=true&theme=tokyonight" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Chefcurry4&layout=compact&theme=tokyonight" alt="Top Languages" />
-</p>
-
----
-
 ### 📅 Isometric Commit Calendar
 
 ![Isometric Commit Calendar](https://github.com/Chefcurry4/Chefcurry4/blob/main/metrics.plugin.isocalendar.svg)
