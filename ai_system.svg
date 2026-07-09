@@ -1,109 +1,264 @@
-<svg width="360" height="220" viewBox="0 0 360 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="470" height="224" viewBox="0 0 470 224" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animated feed-forward neural network performing a forward pass with a softmax output">
   <defs>
-    <linearGradient id="aiBg" x1="0" y1="0" x2="360" y2="220" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#08111D"/>
-      <stop offset="1" stop-color="#140B29"/>
+    <linearGradient id="aiBg" x1="0" y1="0" x2="470" y2="224" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#070E1A"/><stop offset="0.55" stop-color="#0B1024"/><stop offset="1" stop-color="#150B2B"/>
     </linearGradient>
-
-    <linearGradient id="linkGrad" x1="52" y1="110" x2="308" y2="110" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#22D3EE"/>
-      <stop offset="0.5" stop-color="#60A5FA"/>
-      <stop offset="1" stop-color="#A78BFA"/>
+    <linearGradient id="linkGrad" x1="70" y1="116" x2="386" y2="116" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/><stop offset="0.5" stop-color="#6AA8FB"/><stop offset="1" stop-color="#C084FC"/>
     </linearGradient>
-
-    <radialGradient id="coreGrad" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(180 110) rotate(90) scale(44)">
-      <stop stop-color="#E0F2FE"/>
-      <stop offset="0.45" stop-color="#60A5FA"/>
-      <stop offset="1" stop-color="#7C3AED"/>
+    <radialGradient id="node0" cx="0.38" cy="0.32" r="0.78">
+      <stop offset="0" stop-color="#F6FCFF"/><stop offset="0.34" stop-color="#22D3EE"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0.70"/>
     </radialGradient>
-
+    <radialGradient id="node1" cx="0.38" cy="0.32" r="0.78">
+      <stop offset="0" stop-color="#F6FCFF"/><stop offset="0.34" stop-color="#4CA8F5"/><stop offset="1" stop-color="#4CA8F5" stop-opacity="0.70"/>
+    </radialGradient>
+    <radialGradient id="node2" cx="0.38" cy="0.32" r="0.78">
+      <stop offset="0" stop-color="#F6FCFF"/><stop offset="0.34" stop-color="#7C83F7"/><stop offset="1" stop-color="#7C83F7" stop-opacity="0.70"/>
+    </radialGradient>
+    <radialGradient id="node3" cx="0.38" cy="0.32" r="0.78">
+      <stop offset="0" stop-color="#F6FCFF"/><stop offset="0.34" stop-color="#C77DFB"/><stop offset="1" stop-color="#C77DFB" stop-opacity="0.70"/>
+    </radialGradient>
     <filter id="aiGlow" x="-80%" y="-80%" width="260%" height="260%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+      <feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <filter id="haloGlow" x="-140%" y="-140%" width="380%" height="380%"><feGaussianBlur stdDeviation="3.2"/></filter>
   </defs>
+  <style>
+    .edges line.pos  { stroke:url(#linkGrad); stroke-linecap:round; }
+    .edges line.neg  { stroke:#C86E86; stroke-linecap:round; }
+    .edges line.live { stroke:url(#linkGrad); stroke-linecap:round; }
+    .halo { opacity:0; transform-box:fill-box; transform-origin:center; }
+    .node .halo { animation: fire 2.6s ease-in-out infinite; }
+    .node .core { animation: firecore 2.6s ease-in-out infinite; transform-box:fill-box; transform-origin:center; }
+    .l0 .halo,.l0 .core { animation-delay: 0s; }
+    .l1 .halo,.l1 .core { animation-delay: .30s; }
+    .l2 .halo,.l2 .core { animation-delay: .60s; }
+    .l3 .halo,.l3 .core { animation-delay: .90s; }
+    .edges { animation: sweep 2.6s ease-in-out infinite; }
+    .e0 { animation-delay: .12s; } .e1 { animation-delay: .42s; } .e2 { animation-delay: .72s; }
+    .packet { opacity:0; animation: flow 2.6s linear infinite; }
+    .p0 { animation-delay: 0s; } .p1 { animation-delay: .55s; } .p2 { animation-delay: 1.1s; }
+    @keyframes fire {
+      0%   { opacity:0; transform:scale(.7); }
+      9%   { opacity:calc(var(--act) * .9); transform:scale(1.14); }
+      26%  { opacity:0; transform:scale(.9); }
+      100% { opacity:0; transform:scale(.9); }
+    }
+    @keyframes firecore {
+      0%,100% { filter:brightness(.9); }
+      9%      { filter:brightness(calc(.9 + var(--act) * .7)); }
+      30%     { filter:brightness(.9); }
+    }
+    @keyframes sweep { 0%,100%{opacity:.62} 12%{opacity:1} 34%{opacity:.62} }
+    @keyframes flow {
+      0%{offset-distance:0%;opacity:0} 8%{opacity:1} 88%{opacity:1} 100%{offset-distance:100%;opacity:0}
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .halo,.core,.edges,.packet { animation:none !important; }
+      .halo { opacity:calc(var(--act) * .38); }
+    }
+  </style>
 
-  <rect width="360" height="220" rx="24" fill="url(#aiBg)"/>
+  <rect width="470" height="224" rx="22" fill="url(#aiBg)"/>
 
-  <!-- Outer rotating rings -->
-  <g transform="translate(180 110)">
-    <g>
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="14s" repeatCount="indefinite"/>
-      <circle cx="0" cy="0" r="60" stroke="#22D3EE" stroke-width="1.5" stroke-dasharray="10 8" opacity="0.5"/>
-      <circle cx="0" cy="0" r="82" stroke="#A78BFA" stroke-width="1.2" stroke-dasharray="6 10" opacity="0.4"/>
+  <g fill="none">
+    <g class="edges e0">
+      <line x1="74" y1="71.5" x2="176" y2="44.5" class="pos" stroke-width="1.3" opacity="0.306"/>
+      <line x1="74" y1="71.5" x2="176" y2="71.5" class="live" stroke-width="2.25" opacity="0.6"/>
+      <line x1="74" y1="71.5" x2="176" y2="98.5" class="pos" stroke-width="1.42" opacity="0.334"/>
+      <line x1="74" y1="71.5" x2="176" y2="125.5" class="pos" stroke-width="0.77" opacity="0.172"/>
+      <line x1="74" y1="71.5" x2="176" y2="152.5" class="pos" stroke-width="1.66" opacity="0.395"/>
+      <line x1="74" y1="71.5" x2="176" y2="179.5" class="neg" stroke-width="0.59" opacity="0.127"/>
+      <line x1="74" y1="98.5" x2="176" y2="44.5" class="pos" stroke-width="0.58" opacity="0.125"/>
+      <line x1="74" y1="98.5" x2="176" y2="71.5" class="neg" stroke-width="1.79" opacity="0.427"/>
+      <line x1="74" y1="98.5" x2="176" y2="98.5" class="live" stroke-width="2.36" opacity="0.6"/>
+      <line x1="74" y1="98.5" x2="176" y2="125.5" class="pos" stroke-width="1.71" opacity="0.407"/>
+      <line x1="74" y1="98.5" x2="176" y2="152.5" class="neg" stroke-width="0.71" opacity="0.159"/>
+      <line x1="74" y1="98.5" x2="176" y2="179.5" class="neg" stroke-width="1.46" opacity="0.344"/>
+      <line x1="74" y1="125.5" x2="176" y2="44.5" class="neg" stroke-width="0.78" opacity="0.175"/>
+      <line x1="74" y1="125.5" x2="176" y2="71.5" class="pos" stroke-width="0.46" opacity="0.095"/>
+      <line x1="74" y1="125.5" x2="176" y2="98.5" class="pos" stroke-width="1.28" opacity="0.3"/>
+      <line x1="74" y1="125.5" x2="176" y2="125.5" class="pos" stroke-width="1.44" opacity="0.34"/>
+      <line x1="74" y1="125.5" x2="176" y2="152.5" class="pos" stroke-width="1.4" opacity="0.33"/>
+      <line x1="74" y1="125.5" x2="176" y2="179.5" class="neg" stroke-width="1.31" opacity="0.309"/>
+      <line x1="74" y1="152.5" x2="176" y2="44.5" class="pos" stroke-width="2.4" opacity="0.579"/>
+      <line x1="74" y1="152.5" x2="176" y2="71.5" class="pos" stroke-width="2.08" opacity="0.5"/>
+      <line x1="74" y1="152.5" x2="176" y2="98.5" class="neg" stroke-width="1.03" opacity="0.238"/>
+      <line x1="74" y1="152.5" x2="176" y2="125.5" class="neg" stroke-width="0.98" opacity="0.225"/>
+      <line x1="74" y1="152.5" x2="176" y2="152.5" class="live" stroke-width="1.93" opacity="0.6"/>
+      <line x1="74" y1="152.5" x2="176" y2="179.5" class="pos" stroke-width="2.09" opacity="0.503"/>
+    </g>
+    <g class="edges e1">
+      <line x1="176" y1="44.5" x2="278" y2="44.5" class="pos" stroke-width="2.32" opacity="0.559"/>
+      <line x1="176" y1="44.5" x2="278" y2="71.5" class="neg" stroke-width="0.4" opacity="0.08"/>
+      <line x1="176" y1="44.5" x2="278" y2="98.5" class="pos" stroke-width="2.22" opacity="0.535"/>
+      <line x1="176" y1="44.5" x2="278" y2="125.5" class="pos" stroke-width="2.36" opacity="0.57"/>
+      <line x1="176" y1="44.5" x2="278" y2="152.5" class="pos" stroke-width="0.55" opacity="0.117"/>
+      <line x1="176" y1="44.5" x2="278" y2="179.5" class="neg" stroke-width="1.96" opacity="0.469"/>
+      <line x1="176" y1="71.5" x2="278" y2="44.5" class="neg" stroke-width="0.57" opacity="0.124"/>
+      <line x1="176" y1="71.5" x2="278" y2="71.5" class="pos" stroke-width="2.33" opacity="0.562"/>
+      <line x1="176" y1="71.5" x2="278" y2="98.5" class="live" stroke-width="0.64" opacity="0.6"/>
+      <line x1="176" y1="71.5" x2="278" y2="125.5" class="neg" stroke-width="0.6" opacity="0.131"/>
+      <line x1="176" y1="71.5" x2="278" y2="152.5" class="neg" stroke-width="1.99" opacity="0.479"/>
+      <line x1="176" y1="71.5" x2="278" y2="179.5" class="pos" stroke-width="1.52" opacity="0.36"/>
+      <line x1="176" y1="98.5" x2="278" y2="44.5" class="pos" stroke-width="0.78" opacity="0.175"/>
+      <line x1="176" y1="98.5" x2="278" y2="71.5" class="pos" stroke-width="0.66" opacity="0.145"/>
+      <line x1="176" y1="98.5" x2="278" y2="98.5" class="pos" stroke-width="0.63" opacity="0.138"/>
+      <line x1="176" y1="98.5" x2="278" y2="125.5" class="neg" stroke-width="0.83" opacity="0.186"/>
+      <line x1="176" y1="98.5" x2="278" y2="152.5" class="live" stroke-width="2.34" opacity="0.6"/>
+      <line x1="176" y1="98.5" x2="278" y2="179.5" class="pos" stroke-width="1.01" opacity="0.232"/>
+      <line x1="176" y1="125.5" x2="278" y2="44.5" class="pos" stroke-width="0.82" opacity="0.185"/>
+      <line x1="176" y1="125.5" x2="278" y2="71.5" class="pos" stroke-width="2.11" opacity="0.507"/>
+      <line x1="176" y1="125.5" x2="278" y2="98.5" class="pos" stroke-width="0.6" opacity="0.13"/>
+      <line x1="176" y1="125.5" x2="278" y2="125.5" class="neg" stroke-width="0.83" opacity="0.187"/>
+      <line x1="176" y1="125.5" x2="278" y2="152.5" class="neg" stroke-width="1.95" opacity="0.466"/>
+      <line x1="176" y1="125.5" x2="278" y2="179.5" class="neg" stroke-width="0.99" opacity="0.228"/>
+      <line x1="176" y1="152.5" x2="278" y2="44.5" class="pos" stroke-width="0.58" opacity="0.125"/>
+      <line x1="176" y1="152.5" x2="278" y2="71.5" class="pos" stroke-width="0.89" opacity="0.202"/>
+      <line x1="176" y1="152.5" x2="278" y2="98.5" class="pos" stroke-width="1.14" opacity="0.266"/>
+      <line x1="176" y1="152.5" x2="278" y2="125.5" class="live" stroke-width="2.32" opacity="0.6"/>
+      <line x1="176" y1="152.5" x2="278" y2="152.5" class="pos" stroke-width="1.55" opacity="0.367"/>
+      <line x1="176" y1="152.5" x2="278" y2="179.5" class="neg" stroke-width="0.77" opacity="0.171"/>
+      <line x1="176" y1="179.5" x2="278" y2="44.5" class="pos" stroke-width="2.22" opacity="0.534"/>
+      <line x1="176" y1="179.5" x2="278" y2="71.5" class="neg" stroke-width="0.9" opacity="0.205"/>
+      <line x1="176" y1="179.5" x2="278" y2="98.5" class="pos" stroke-width="1.88" opacity="0.45"/>
+      <line x1="176" y1="179.5" x2="278" y2="125.5" class="pos" stroke-width="0.79" opacity="0.178"/>
+      <line x1="176" y1="179.5" x2="278" y2="152.5" class="pos" stroke-width="2.16" opacity="0.521"/>
+      <line x1="176" y1="179.5" x2="278" y2="179.5" class="neg" stroke-width="1.24" opacity="0.291"/>
+    </g>
+    <g class="edges e2">
+      <line x1="278" y1="44.5" x2="372" y2="85.0" class="pos" stroke-width="0.48" opacity="0.099"/>
+      <line x1="278" y1="44.5" x2="372" y2="112.0" class="pos" stroke-width="0.88" opacity="0.199"/>
+      <line x1="278" y1="44.5" x2="372" y2="139.0" class="pos" stroke-width="0.91" opacity="0.208"/>
+      <line x1="278" y1="71.5" x2="372" y2="85.0" class="neg" stroke-width="1.59" opacity="0.378"/>
+      <line x1="278" y1="71.5" x2="372" y2="112.0" class="pos" stroke-width="0.75" opacity="0.168"/>
+      <line x1="278" y1="71.5" x2="372" y2="139.0" class="neg" stroke-width="0.54" opacity="0.114"/>
+      <line x1="278" y1="98.5" x2="372" y2="85.0" class="live" stroke-width="1.52" opacity="0.6"/>
+      <line x1="278" y1="98.5" x2="372" y2="112.0" class="neg" stroke-width="1.63" opacity="0.387"/>
+      <line x1="278" y1="98.5" x2="372" y2="139.0" class="neg" stroke-width="2.23" opacity="0.539"/>
+      <line x1="278" y1="125.5" x2="372" y2="85.0" class="neg" stroke-width="0.43" opacity="0.088"/>
+      <line x1="278" y1="125.5" x2="372" y2="112.0" class="live" stroke-width="1.29" opacity="0.6"/>
+      <line x1="278" y1="125.5" x2="372" y2="139.0" class="pos" stroke-width="0.75" opacity="0.168"/>
+      <line x1="278" y1="152.5" x2="372" y2="85.0" class="neg" stroke-width="1.54" opacity="0.366"/>
+      <line x1="278" y1="152.5" x2="372" y2="112.0" class="pos" stroke-width="1.12" opacity="0.261"/>
+      <line x1="278" y1="152.5" x2="372" y2="139.0" class="live" stroke-width="2.36" opacity="0.6"/>
+      <line x1="278" y1="179.5" x2="372" y2="85.0" class="pos" stroke-width="1.78" opacity="0.426"/>
+      <line x1="278" y1="179.5" x2="372" y2="112.0" class="neg" stroke-width="0.68" opacity="0.15"/>
+      <line x1="278" y1="179.5" x2="372" y2="139.0" class="pos" stroke-width="0.44" opacity="0.089"/>
     </g>
   </g>
 
-  <g transform="translate(180 110)">
-    <g>
-      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="18s" repeatCount="indefinite"/>
-      <ellipse cx="0" cy="0" rx="112" ry="42" stroke="#38BDF8" stroke-width="1.2" opacity="0.28"/>
-    </g>
+  <g>
+    <circle class="packet p0" r="3.2" fill="#67E8F9" filter="url(#aiGlow)" style="offset-path:path('M74 71.5 L176 71.5 L278 98.5 L372 85.0');"/>
+    <circle class="packet p1" r="3.2" fill="#A5B4FC" filter="url(#aiGlow)" style="offset-path:path('M74 152.5 L176 152.5 L278 125.5 L372 112.0');"/>
+    <circle class="packet p2" r="3.2" fill="#F0ABFC" filter="url(#aiGlow)" style="offset-path:path('M74 98.5 L176 98.5 L278 152.5 L372 139.0');"/>
   </g>
 
-  <!-- Network links -->
-  <g stroke="url(#linkGrad)" stroke-width="2" stroke-linecap="round" opacity="0.8">
-    <path d="M80 66L150 96"/>
-    <path d="M80 154L150 124"/>
-    <path d="M180 110L150 96"/>
-    <path d="M180 110L150 124"/>
-    <path d="M180 110L210 82"/>
-    <path d="M180 110L210 138"/>
-    <path d="M210 82L286 64"/>
-    <path d="M210 138L286 156"/>
-    <path d="M210 82L286 110"/>
-    <path d="M210 138L286 110"/>
+  <g>
+      <g class="node l0" style="--act:0.95;transform-box:fill-box;transform-origin:center;">
+        <circle cx="74" cy="71.5" r="13" fill="#22D3EE" opacity="0.16" filter="url(#haloGlow)"/>
+        <circle class="halo" cx="74" cy="71.5" r="12" fill="#22D3EE" filter="url(#haloGlow)"/>
+        <circle class="core" cx="74" cy="71.5" r="9" fill="url(#node0)" stroke="#EAF6FF" stroke-opacity="0.30" stroke-width="1"/>
+      </g>
+      <g class="node l0" style="--act:0.85;transform-box:fill-box;transform-origin:center;">
+        <circle cx="74" cy="98.5" r="13" fill="#22D3EE" opacity="0.16" filter="url(#haloGlow)"/>
+        <circle class="halo" cx="74" cy="98.5" r="12" fill="#22D3EE" filter="url(#haloGlow)"/>
+        <circle class="core" cx="74" cy="98.5" r="9" fill="url(#node0)" stroke="#EAF6FF" stroke-opacity="0.30" stroke-width="1"/>
+      </g>
+      <g class="node l0" style="--act:1.00;transform-box:fill-box;transform-origin:center;">
+        <circle cx="74" cy="125.5" r="13" fill="#22D3EE" opacity="0.16" filter="url(#haloGlow)"/>
+        <circle class="halo" cx="74" cy="125.5" r="12" fill="#22D3EE" filter="url(#haloGlow)"/>
+        <circle class="core" cx="74" cy="125.5" r="9" fill="url(#node0)" stroke="#EAF6FF" stroke-opacity="0.30" stroke-width="1"/>
+      </g>
+      <g class="node l0" style="--act:0.90;transform-box:fill-box;transform-origin:center;">
+        <circle cx="74" cy="152.5" r="13" fill="#22D3EE" opacity="0.16" filter="url(#haloGlow)"/>
+        <circle class="halo" cx="74" cy="152.5" r="12" fill="#22D3EE" filter="url(#haloGlow)"/>
+        <circle class="core" cx="74" cy="152.5" r="9" fill="url(#node0)" stroke="#EAF6FF" stroke-opacity="0.30" stroke-width="1"/>
+      </g>
+      <g class="node l1" style="--act:0.90;transform-box:fill-box;transform-origin:center;">
+        <circle cx="176" cy="44.5" r="13" fill="#4CA8F5" opacity="0.16" filter="url(#haloGlow)"/>
+        <circle class="halo" cx="176" cy="44.5" r="12" fill="#4CA8F5" filter="url(#haloGlow)"/>
+        <circle class="core" cx="176" cy="44.5" r="9" fill="url(#node1)" stroke="#EAF6FF" stroke-opacity="0.30" stroke-width="1"/>
+      </g>
+      <g class="node l1" style="--act:0.32;transform-box:fill-box;transform-origin:center;">
+        <circle cx="176" cy="71.5" r="13" fill="#4CA8F5" opacity="0.16" filter="url(#haloGlow)"/>
+        <circle class="halo" cx="176" cy="71.5" r="12" fill="#4CA8F5" filter="url(#haloGlow)"/>
+        <circle class="core" cx="176" cy="71.5" r="9" fill="url(#node1)" stroke="#EAF6FF" stroke-opacity="0.30" stroke-width="1"/>
+      </g>
+      <g class="node l1" style="--act:0.68;transform-box:fill-box;transform-origin:center;">
+        <circle cx="176" cy="98.5" r="13" fill="#4CA8F5" opacity="0.16" filter="url(#haloGlow)"/>
+        <circle class="halo" cx="176" cy="98.5" r="12" fill="#4CA8F5" filter="url(#haloGlow)"/>
+        <circle class="core" cx="176" cy="98.5" r="9" fill="url(#node1)" stroke="#EAF6FF" stroke-opacity="0.30" stroke-width="1"/>
+      </g>
+      <g class="node l1" style="--act:0.15;transform-box:fill-box;transform-origin:center;">
+        <circle cx="176" cy="125.5" r="13" fill="#4CA8F5" opacity="0.16" filter="url(#haloGlow)"/>
+        <circle class="halo" cx="176" cy="125.5" r="12" fill="#4CA8F5" filter="url(#haloGlow)"/>
+        <circle class="core" cx="176" cy="125.5" r="9" fill="url(#node1)" stroke="#EAF6FF" stroke-opacity="0.30" stroke-width="1"/>
+      </g>
+      <g class="node l1" style="--act:1.00;transform-box:fill-box;transform-origin:center;">
+        <circle cx="176" cy="152.5" r="13" fill="#4CA8F5" opacity="0.16" filter="url(#haloGlow)"/>
+        <circle class="halo" cx="176" cy="152.5" r="12" fill="#4CA8F5" filter="url(#haloGlow)"/>
+        <circle class="core" cx="176" cy="152.5" r="9" fill="url(#node1)" stroke="#EAF6FF" stroke-opacity="0.30" stroke-width="1"/>
+      </g>
+      <g class="node l1" style="--act:0.50;transform-box:fill-box;transform-origin:center;">
+        <circle cx="176" cy="179.5" r="13" fill="#4CA8F5" opacity="0.16" filter="url(#haloGlow)"/>
+        <circle class="halo" cx="176" cy="179.5" r="12" fill="#4CA8F5" filter="url(#haloGlow)"/>
+        <circle class="core" cx="176" cy="179.5" r="9" fill="url(#node1)" stroke="#EAF6FF" stroke-opacity="0.30" stroke-width="1"/>
+      </g>
+      <g class="node l2" style="--act:0.55;transform-box:fill-box;transform-origin:center;">
+        <circle cx="278" cy="44.5" r="13" fill="#7C83F7" opacity="0.16" filter="url(#haloGlow)"/>
+        <circle class="halo" cx="278" cy="44.5" r="12" fill="#7C83F7" filter="url(#haloGlow)"/>
+        <circle class="core" cx="278" cy="44.5" r="9" fill="url(#node2)" stroke="#EAF6FF" stroke-opacity="0.30" stroke-width="1"/>
+      </g>
+      <g class="node l2" style="--act:0.95;transform-box:fill-box;transform-origin:center;">
+        <circle cx="278" cy="71.5" r="13" fill="#7C83F7" opacity="0.16" filter="url(#haloGlow)"/>
+        <circle class="halo" cx="278" cy="71.5" r="12" fill="#7C83F7" filter="url(#haloGlow)"/>
+        <circle class="core" cx="278" cy="71.5" r="9" fill="url(#node2)" stroke="#EAF6FF" stroke-opacity="0.30" stroke-width="1"/>
+      </g>
+      <g class="node l2" style="--act:0.18;transform-box:fill-box;transform-origin:center;">
+        <circle cx="278" cy="98.5" r="13" fill="#7C83F7" opacity="0.16" filter="url(#haloGlow)"/>
+        <circle class="halo" cx="278" cy="98.5" r="12" fill="#7C83F7" filter="url(#haloGlow)"/>
+        <circle class="core" cx="278" cy="98.5" r="9" fill="url(#node2)" stroke="#EAF6FF" stroke-opacity="0.30" stroke-width="1"/>
+      </g>
+      <g class="node l2" style="--act:0.72;transform-box:fill-box;transform-origin:center;">
+        <circle cx="278" cy="125.5" r="13" fill="#7C83F7" opacity="0.16" filter="url(#haloGlow)"/>
+        <circle class="halo" cx="278" cy="125.5" r="12" fill="#7C83F7" filter="url(#haloGlow)"/>
+        <circle class="core" cx="278" cy="125.5" r="9" fill="url(#node2)" stroke="#EAF6FF" stroke-opacity="0.30" stroke-width="1"/>
+      </g>
+      <g class="node l2" style="--act:0.40;transform-box:fill-box;transform-origin:center;">
+        <circle cx="278" cy="152.5" r="13" fill="#7C83F7" opacity="0.16" filter="url(#haloGlow)"/>
+        <circle class="halo" cx="278" cy="152.5" r="12" fill="#7C83F7" filter="url(#haloGlow)"/>
+        <circle class="core" cx="278" cy="152.5" r="9" fill="url(#node2)" stroke="#EAF6FF" stroke-opacity="0.30" stroke-width="1"/>
+      </g>
+      <g class="node l2" style="--act:1.00;transform-box:fill-box;transform-origin:center;">
+        <circle cx="278" cy="179.5" r="13" fill="#7C83F7" opacity="0.16" filter="url(#haloGlow)"/>
+        <circle class="halo" cx="278" cy="179.5" r="12" fill="#7C83F7" filter="url(#haloGlow)"/>
+        <circle class="core" cx="278" cy="179.5" r="9" fill="url(#node2)" stroke="#EAF6FF" stroke-opacity="0.30" stroke-width="1"/>
+      </g>
+      <g class="node l3" style="--act:1.00;transform-box:fill-box;transform-origin:center;">
+        <circle cx="372" cy="85.0" r="13" fill="#C77DFB" opacity="0.16" filter="url(#haloGlow)"/>
+        <circle class="halo" cx="372" cy="85.0" r="12" fill="#C77DFB" filter="url(#haloGlow)"/>
+        <circle class="core" cx="372" cy="85.0" r="9" fill="url(#node3)" stroke="#EAF6FF" stroke-opacity="0.30" stroke-width="1"/>
+      </g>
+      <g class="node l3" style="--act:0.52;transform-box:fill-box;transform-origin:center;">
+        <circle cx="372" cy="112.0" r="13" fill="#C77DFB" opacity="0.16" filter="url(#haloGlow)"/>
+        <circle class="halo" cx="372" cy="112.0" r="12" fill="#C77DFB" filter="url(#haloGlow)"/>
+        <circle class="core" cx="372" cy="112.0" r="9" fill="url(#node3)" stroke="#EAF6FF" stroke-opacity="0.30" stroke-width="1"/>
+      </g>
+      <g class="node l3" style="--act:0.37;transform-box:fill-box;transform-origin:center;">
+        <circle cx="372" cy="139.0" r="13" fill="#C77DFB" opacity="0.16" filter="url(#haloGlow)"/>
+        <circle class="halo" cx="372" cy="139.0" r="12" fill="#C77DFB" filter="url(#haloGlow)"/>
+        <circle class="core" cx="372" cy="139.0" r="9" fill="url(#node3)" stroke="#EAF6FF" stroke-opacity="0.30" stroke-width="1"/>
+      </g>
   </g>
 
-  <!-- Data packets -->
-  <circle r="4" fill="#67E8F9" filter="url(#aiGlow)">
-    <animateMotion dur="3.4s" repeatCount="indefinite">
-      <mpath href="#packet1"/>
-    </animateMotion>
-    <animate attributeName="opacity" values="0;1;1;0" dur="3.4s" repeatCount="indefinite"/>
-  </circle>
-  <path id="packet1" d="M80 66L150 96L180 110L210 82L286 64" fill="none"/>
-
-  <circle r="4" fill="#C084FC" filter="url(#aiGlow)">
-    <animateMotion dur="4.1s" repeatCount="indefinite">
-      <mpath href="#packet2"/>
-    </animateMotion>
-    <animate attributeName="opacity" values="0;1;1;0" dur="4.1s" repeatCount="indefinite"/>
-  </circle>
-  <path id="packet2" d="M80 154L150 124L180 110L210 138L286 156" fill="none"/>
-
-  <circle r="3.5" fill="#F8FAFC" filter="url(#aiGlow)">
-    <animateMotion dur="2.8s" repeatCount="indefinite">
-      <mpath href="#packet3"/>
-    </animateMotion>
-    <animate attributeName="opacity" values="0;1;1;0" dur="2.8s" repeatCount="indefinite"/>
-  </circle>
-  <path id="packet3" d="M286 110L210 82L180 110L210 138L286 110" fill="none"/>
-
-  <!-- Nodes -->
-  <g filter="url(#aiGlow)">
-    <circle cx="80" cy="66" r="10" fill="#0EA5E9"/>
-    <circle cx="80" cy="154" r="10" fill="#0EA5E9"/>
-    <circle cx="150" cy="96" r="11" fill="#38BDF8"/>
-    <circle cx="150" cy="124" r="11" fill="#38BDF8"/>
-    <circle cx="210" cy="82" r="11" fill="#8B5CF6"/>
-    <circle cx="210" cy="138" r="11" fill="#8B5CF6"/>
-    <circle cx="286" cy="64" r="10" fill="#A78BFA"/>
-    <circle cx="286" cy="110" r="12" fill="#C084FC"/>
-    <circle cx="286" cy="156" r="10" fill="#A78BFA"/>
-  </g>
-
-  <!-- Core -->
-  <g filter="url(#aiGlow)">
-    <circle cx="180" cy="110" r="26" fill="url(#coreGrad)">
-      <animate attributeName="r" values="26;29;26" dur="3.2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="180" cy="110" r="38" stroke="#E0F2FE" stroke-width="1.5" opacity="0.75">
-      <animate attributeName="r" values="38;52;38" dur="3.2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.75;0.12;0.75" dur="3.2s" repeatCount="indefinite"/>
-    </circle>
+  <!-- softmax output distribution -->
+  <g>
+      <rect x="388" y="82.0" width="40" height="6" rx="3" fill="#9FB2D0" opacity="0.15"/>
+      <rect x="388" y="82.0" width="28.4" height="6" rx="3" fill="#F0ABFC" opacity="1.0"/>
+      <rect x="388" y="109.0" width="40" height="6" rx="3" fill="#9FB2D0" opacity="0.15"/>
+      <rect x="388" y="109.0" width="8.8" height="6" rx="3" fill="#A78BFA" opacity="0.75"/>
+      <rect x="388" y="136.0" width="40" height="6" rx="3" fill="#9FB2D0" opacity="0.15"/>
+      <rect x="388" y="136.0" width="2.8" height="6" rx="3" fill="#A78BFA" opacity="0.75"/>
   </g>
 </svg>
