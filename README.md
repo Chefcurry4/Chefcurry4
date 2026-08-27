@@ -1,6 +1,6 @@
 ### Hi there 👋 I'm Massimo and I really like: 
 
-| Fluids & CFD | AI & ML | Basketball |
+| CFD | AI | Basketball |
 | :--- | :----: | ----: |
 | <a href="https://github.com/Chefcurry4"><img src="killer-whale-1.svg" width="300" alt="Animated orca gliding through deep water, with streamlines wrapping its body and vortices shedding from its fluke tips" /></a> | <a href="https://github.com/Chefcurry4"><img src="ai_system.svg" width="300" alt="Animated neural network running a forward pass into a labelled softmax" /></a> | <a href="https://github.com/Chefcurry4"><img src="basketball.svg" width="300" alt="Animated jump shot arcing on a parabola and dropping through the net for a swish" /></a>
 
