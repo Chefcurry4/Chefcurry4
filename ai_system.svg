@@ -1,4 +1,4 @@
-<svg width="440" height="260" viewBox="0 0 440 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A neural network running a forward pass, with activation pulsing layer by layer into a softmax that scores ORCA at 0.72">
+<svg width="440" height="260" viewBox="0 0 440 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A neural network running a forward pass, with activation pulsing layer by layer into a softmax output distribution">
   <defs>
     <linearGradient id="ai-bg" x1="0" y1="0" x2="440" y2="260" gradientUnits="userSpaceOnUse"><stop stop-color="#070E1A"/><stop offset="0.55" stop-color="#0B1024"/><stop offset="1" stop-color="#150B2B"/></linearGradient>
     <linearGradient id="ai-link" x1="58" y1="0" x2="316" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#22D3EE"/><stop offset="0.5" stop-color="#6AA8FB"/><stop offset="1" stop-color="#C084FC"/></linearGradient>
@@ -31,7 +31,6 @@
 
     .ai-bar { transform-box: fill-box; transform-origin: left center;
               animation: ai-bar 2.8s cubic-bezier(.2,.8,.3,1) infinite; }
-    .ai-val { animation: ai-val 2.8s ease-out infinite; }
 
     @keyframes ai-fire-hi  { 0%{opacity:0;transform:scale(.7)} 8%{opacity:.85;transform:scale(1.16)}
                              26%{opacity:0;transform:scale(.9)} 100%{opacity:0;transform:scale(.9)} }
@@ -43,22 +42,15 @@
                          30% { filter: brightness(.92); } }
     @keyframes ai-flow { 0% { stroke-dashoffset: 18; } 55%,100% { stroke-dashoffset: -100; } }
     @keyframes ai-bar  { 0%,34% { transform: scaleX(0); } 62%,100% { transform: scaleX(1); } }
-    @keyframes ai-val  { 0%,34% { opacity: 0; } 62%,100% { opacity: 1; } }
 
     @media (prefers-reduced-motion: reduce) {
-      .ai-halo, .ai-core, .ai-pulse, .ai-bar, .ai-val { animation: none !important; }
+      .ai-halo, .ai-core, .ai-pulse, .ai-bar { animation: none !important; }
       .hi .ai-halo { opacity: .34; } .mid .ai-halo { opacity: .18; } .lo .ai-halo { opacity: .07; }
       .ai-pulse { stroke-dasharray: none; opacity: .5; }
     }
   </style>
   <g clip-path="url(#ai-card)">
     <rect width="440" height="260" fill="url(#ai-bg)"/>
-    <g font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="7.5" letter-spacing="1.5" fill="#9FB2D0" fill-opacity="0.42" text-anchor="middle">
-      <text x="58" y="36">INPUT</text>
-      <text x="146" y="36">HIDDEN</text>
-      <text x="234" y="36">HIDDEN</text>
-      <text x="374" y="36">SOFTMAX</text>
-    </g>
     <g fill="none" stroke-linecap="round">
       <g class="ai-e0">
         <path d="M58,75 C94.96000000000001,75 109.03999999999999,126 146,126" stroke="url(#ai-link)" stroke-width="1.69" opacity="0.305"/>
@@ -217,23 +209,15 @@
         <circle class="ai-core" r="9" fill="url(#ai-n3)" stroke="#EAF6FF" stroke-opacity="0.30" stroke-width="1"/>
       </g>
     </g>
-    <g font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-      <text x="338" y="81" font-size="8.5" letter-spacing="1.1" fill="#F0ABFC" fill-opacity="1">ORCA</text>
-      <text class="ai-val" x="410" y="81" text-anchor="end" font-size="8.5" fill="#F0ABFC" fill-opacity="0.95">0.72</text>
+    <g>
       <rect x="338" y="87" width="72" height="6" rx="3" fill="#9FB2D0" opacity="0.13"/>
       <rect class="ai-bar" x="338" y="87" width="51.8" height="6" rx="3" fill="#F0ABFC" opacity="1"/>
-      <text x="338" y="117" font-size="8.5" letter-spacing="1.1" fill="#8B93B8" fill-opacity="0.7">DOLPHIN</text>
-      <text class="ai-val" x="410" y="117" text-anchor="end" font-size="8.5" fill="#8B93B8" fill-opacity="0.55">0.21</text>
       <rect x="338" y="123" width="72" height="6" rx="3" fill="#9FB2D0" opacity="0.13"/>
       <rect class="ai-bar" x="338" y="123" width="15.1" height="6" rx="3" fill="#A78BFA" opacity="0.66"/>
-      <text x="338" y="153" font-size="8.5" letter-spacing="1.1" fill="#8B93B8" fill-opacity="0.7">SHARK</text>
-      <text class="ai-val" x="410" y="153" text-anchor="end" font-size="8.5" fill="#8B93B8" fill-opacity="0.55">0.07</text>
       <rect x="338" y="159" width="72" height="6" rx="3" fill="#9FB2D0" opacity="0.13"/>
       <rect class="ai-bar" x="338" y="159" width="5.0" height="6" rx="3" fill="#A78BFA" opacity="0.66"/>
     </g>
     <rect width="440" height="260" fill="url(#ai-vig)"/>
-    <text x="20" y="240" fill="#9FB2D0" fill-opacity="0.5" font-size="9" letter-spacing="2.2" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">FEED-FORWARD NET</text>
-    <text x="420" y="240" text-anchor="end" fill="#9FB2D0" fill-opacity="0.34" font-size="9" letter-spacing="1.4" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">argmax = ORCA</text>
   </g>
   <rect x="0.5" y="0.5" width="439" height="259" rx="19.5" fill="none" stroke="#ffffff" stroke-opacity="0.09"/>
 </svg>

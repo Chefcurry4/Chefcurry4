@@ -1,22 +1,22 @@
-<svg width="440" height="260" viewBox="0 0 440 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An orca gliding through deep water, with streamlines wrapping its body and vortices shedding from its fluke tips">
+<svg width="440" height="260" viewBox="0 0 440 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A killer whale baring its teeth as it glides through dark water">
   <defs>
     <linearGradient id="w-water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0a2a3b"/>
-      <stop offset="0.45" stop-color="#061b29"/>
-      <stop offset="1" stop-color="#030d16"/>
+      <stop offset="0" stop-color="#062030"/>
+      <stop offset="0.45" stop-color="#03121c"/>
+      <stop offset="1" stop-color="#01070c"/>
     </linearGradient>
     <radialGradient id="w-pool" cx="0.3" cy="0" r="0.9">
-      <stop offset="0" stop-color="#8fe3f2" stop-opacity="0.20"/>
+      <stop offset="0" stop-color="#8fe3f2" stop-opacity="0.11"/>
       <stop offset="0.55" stop-color="#3f9fc0" stop-opacity="0.05"/>
       <stop offset="1" stop-color="#3f9fc0" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="w-ray" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#bff0ff" stop-opacity="0.16"/>
+      <stop offset="0" stop-color="#bff0ff" stop-opacity="0.10"/>
       <stop offset="0.6" stop-color="#bff0ff" stop-opacity="0.04"/>
       <stop offset="1" stop-color="#bff0ff" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="w-body" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#2b3841"/>
+      <stop offset="0" stop-color="#222c35"/>
       <stop offset="0.38" stop-color="#141c24"/>
       <stop offset="1" stop-color="#05090e"/>
     </linearGradient>
@@ -30,11 +30,11 @@
       <stop offset="1" stop-color="#cfdbe0"/>
     </linearGradient>
     <linearGradient id="w-sheen" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#d8f4ff" stop-opacity="0.30"/>
+      <stop offset="0" stop-color="#d8f4ff" stop-opacity="0.15"/>
       <stop offset="1" stop-color="#d8f4ff" stop-opacity="0"/>
     </linearGradient>
     <radialGradient id="w-spec" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.42"/>
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.20"/>
       <stop offset="0.65" stop-color="#ffffff" stop-opacity="0.08"/>
       <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
@@ -60,10 +60,8 @@
     .w-pecfar { animation: w-pec 3.4s ease-in-out infinite -0.5s; transform-origin: 176px 168px; }
     .w-dorsal { animation: w-dorsal 4.2s ease-in-out infinite; transform-origin: 224px 95px; }
     .w-blink  { animation: w-blink 7s infinite; transform-box: fill-box; transform-origin: center; }
-    .w-flow   { stroke-dasharray: 4 10; animation: w-flow 1.9s linear infinite; }
     .w-rays   { animation: w-rays 11s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 0; }
     .w-p      { animation: w-rise 12s linear infinite; transform-box: fill-box; }
-    .w-vtx    { animation: w-shed 3.2s linear infinite; transform-box: fill-box; transform-origin: center; opacity: 0; }
     .w-bub    { animation: w-bub 6s ease-out infinite; transform-box: fill-box; opacity: 0; }
 
     @keyframes w-swim {
@@ -75,18 +73,12 @@
     @keyframes w-pec   { 0%,100% { transform: rotate(5deg); }  50% { transform: rotate(-6deg); } }
     @keyframes w-dorsal{ 0%,100% { transform: rotate(-1.6deg); } 50% { transform: rotate(1.6deg); } }
     @keyframes w-blink { 0%,95%,100% { transform: scaleY(1); } 97% { transform: scaleY(0.1); } }
-    @keyframes w-flow  { to { stroke-dashoffset: -14; } }
     @keyframes w-rays  { 0%,100% { opacity: 0.75; transform: skewX(0deg); } 50% { opacity: 1; transform: skewX(1.6deg); } }
     @keyframes w-rise  {
       0%   { transform: translate(0, 0); opacity: 0; }
       12%  { opacity: 1; }
       88%  { opacity: 1; }
       100% { transform: translate(-14px, -120px); opacity: 0; }
-    }
-    @keyframes w-shed {
-      0%   { transform: translate(0,0) scale(0.5) rotate(0deg); opacity: 0; }
-      18%  { opacity: 0.55; }
-      100% { transform: translate(46px,0) scale(1.5) rotate(38deg); opacity: 0; }
     }
     @keyframes w-bub {
       0%   { transform: translate(0,0) scale(0.6); opacity: 0; }
@@ -97,9 +89,7 @@
 
     @media (prefers-reduced-motion: reduce) {
       .w-swim, .w-ped, .w-fluke, .w-pec, .w-pecfar, .w-dorsal,
-      .w-blink, .w-flow, .w-rays, .w-p, .w-bub { animation: none !important; }
-      .w-vtx { animation: none !important; opacity: 0.4; }
-      .w-v2  { opacity: 0.22; }
+      .w-blink, .w-rays, .w-p, .w-bub { animation: none !important; }
     }
   </style>
 
@@ -135,16 +125,6 @@
       <circle class="w-p" cx="60"  cy="120" r="0.9" opacity="0.16" style="animation-duration:19s;animation-delay:-4s"/>
       <circle class="w-p" cx="256" cy="64"  r="1.0" opacity="0.14" style="animation-duration:20s;animation-delay:-10s"/>
       <circle class="w-p" cx="408" cy="96"  r="1.2" opacity="0.15" style="animation-duration:15s;animation-delay:-7s"/>
-    </g>
-
-    <!-- ===== flow field: streamlines wrapping the hull ===== -->
-    <g fill="none" stroke="#7fd4e8" stroke-linecap="round">
-      <path class="w-flow" d="M-10,44 C90,42 190,38 268,44 C330,49 386,55 450,58" stroke-width="1.1" opacity="0.16"/>
-      <path class="w-flow" d="M-10,72 C70,70 150,62 214,64 C286,66 362,74 450,80" stroke-width="1.2" opacity="0.20" style="animation-delay:-0.5s"/>
-      <path class="w-flow" d="M-10,104 C40,100 72,88 118,80 C176,70 232,74 286,90 C340,106 396,116 450,120" stroke-width="1.3" opacity="0.26" style="animation-delay:-1.1s"/>
-      <path class="w-flow" d="M-10,132 C20,130 30,126 36,120 C30,146 44,166 74,178 C130,198 200,196 268,178 C322,164 380,152 450,148" stroke-width="1.4" opacity="0.24" style="animation-delay:-0.3s"/>
-      <path class="w-flow" d="M-10,168 C50,172 96,190 158,200 C224,210 300,200 366,184 C400,176 428,172 450,170" stroke-width="1.2" opacity="0.20" style="animation-delay:-1.4s"/>
-      <path class="w-flow" d="M-10,206 C80,212 170,222 258,214 C330,207 392,198 450,192" stroke-width="1.1" opacity="0.15" style="animation-delay:-0.8s"/>
     </g>
 
     <!-- ===== the whale ===== -->
@@ -187,35 +167,59 @@
 
       <!-- countershading: white throat, belly, and the rear flank flash -->
       <path fill="url(#w-belly)"
-        d="M46,146
-           C72,153 112,158 152,159
+        d="M48,156
+           C70,159 112,158.5 152,159
            C192,160 228,158 260,153
            C282,149 298,144 312,140
            C316,146 313,153 306,158
            C282,168 250,175 212,178
            C172,185 126,186 88,176
-           C62,169 48,158 46,146 Z"/>
+           C62,169 50,163 48,156 Z"/>
 
       <!-- soft shadow where the white wraps under -->
       <path fill="#050a10" opacity="0.20" filter="url(#w-soft)"
-        d="M50,148 C80,156 130,162 180,162 C230,162 276,155 310,142
+        d="M52,158 C82,161 130,163 180,163 C230,162 276,155 310,142
            C276,152 230,159 180,159 C130,159 80,154 50,148 Z"/>
 
       <!-- grey saddle patch, behind and below the dorsal -->
       <path fill="#75838d" opacity="0.50" filter="url(#w-soft)"
         d="M248,101 C272,106 292,114 306,123 C288,121 262,116 244,112 C243,107 245,103 248,101 Z"/>
 
-      <!-- eye patch -->
-      <ellipse cx="126" cy="141" rx="19" ry="7.6" fill="#edf3f4" transform="rotate(-20 126 141)"/>
+      <!-- eye patch: smaller and raked back to a point, tight to the eye -->
+      <path fill="#e6ecee"
+        d="M110,145 C113,139 122,133 134,130 C139,128.6 142,130 140,133
+           C136,139 125,144 115,147 C111,148.2 109,147.6 110,145 Z"/>
 
-      <!-- eye, at the front-lower corner of the patch -->
+      <!-- eye: narrowed and cold, with a hard lower lid so it reads on the dark flank -->
       <g class="w-blink">
-        <ellipse cx="104" cy="149" rx="4.4" ry="3.8" fill="#04070a"/>
-        <circle cx="102.6" cy="147.6" r="1.2" fill="#ffffff" opacity="0.8"/>
+        <ellipse cx="103" cy="149" rx="5.4" ry="3.2" fill="#02050a" transform="rotate(-14 103 149)"/>
+        <path d="M98.5,151.4 C101,152.5 105.5,152 107.5,150.4" fill="none" stroke="#6c8794"
+              stroke-width="0.7" opacity="0.28" stroke-linecap="round"/>
+        <path d="M99,146.6 C102,145.3 106,145.6 108,147" fill="none" stroke="#0d151c"
+              stroke-width="1.4" opacity="0.9" stroke-linecap="round"/>
+        <ellipse cx="101.4" cy="148" rx="1" ry="0.6" fill="#c6e0ec" opacity="0.4" transform="rotate(-14 101.4 148)"/>
       </g>
 
-      <!-- mouth line -->
-      <path d="M45,152 C64,159 86,162 110,161" fill="none" stroke="#04070a" stroke-width="1.5" opacity="0.28" stroke-linecap="round"/>
+      <!-- parted jaws. The gape's top edge rides just above the belly's white
+           boundary, or a sliver of white leaks through between them. -->
+      <path d="M54,146 C72,150 92,153.5 112,156 L112,158 C92,164 72,166 56,163
+               C53,161 52,153 54,146 Z" fill="#0b0407"/>
+      <path d="M56,147 C72,150.4 92,153.8 106,155.3" fill="none" stroke="#02040a"
+            stroke-width="1.3" stroke-linecap="round" opacity="0.5"/>
+      <g fill="#f2efe4">
+        <path d="M57,146.7 Q57.4,150.7 59,152.3 Q60.6,150.7 61,147.5 Z
+                 M66,148.3 Q66.4,152.3 68,153.9 Q69.6,152.3 70,149.1 Z
+                 M75,150.2 Q75.4,154.2 77,155.8 Q78.6,154.2 79,151.0 Z
+                 M84,151.7 Q84.4,155.7 86,157.3 Q87.6,155.7 88,152.5 Z
+                 M93,153.2 Q93.4,157.2 95,158.8 Q96.6,157.2 97,154.0 Z
+                 M102,154.6 Q102.4,158.6 104,160.2 Q105.6,158.6 106,155.4 Z"/>
+        <path opacity="0.92"
+              d="M61,164.5 Q61.4,160.7 63,159.5 Q64.6,160.7 65,164.5 Z
+                 M70,164.8 Q70.4,161.0 72,159.8 Q73.6,161.0 74,164.8 Z
+                 M79,164.3 Q79.4,160.5 81,159.3 Q82.6,160.5 83,164.3 Z
+                 M88,163.4 Q88.4,159.6 90,158.4 Q91.6,159.6 92,163.4 Z
+                 M97,161.8 Q97.4,158.6 99,157.4 Q100.6,158.6 101,161.8 Z"/>
+      </g>
 
       <!-- blowhole -->
       <path d="M116,92 C120,90 125,91 126,94" fill="none" stroke="#000" stroke-width="1.5" opacity="0.42" stroke-linecap="round"/>
@@ -227,7 +231,7 @@
 
       <!-- rim light along the head and back -->
       <path d="M50,128 C62,110 84,97 116,90 C160,81 196,82 226,90"
-        fill="none" stroke="#a9e4f7" stroke-opacity="0.30" stroke-width="2.2"
+        fill="none" stroke="#a9e4f7" stroke-opacity="0.18" stroke-width="2.2"
         stroke-linecap="round" filter="url(#w-soft)"/>
 
       <!-- near-side pectoral -->
@@ -258,23 +262,8 @@
       </g>
     </g>
 
-    <!-- ===== vortices shedding from the fluke tips ===== -->
-    <g fill="none" stroke="#8fe3f2" stroke-linecap="round" stroke-width="1.5">
-      <g class="w-vtx" style="animation-delay:0s">
-        <path d="M410,112 C422,107 432,114 429,124 C426,132 415,133 412,126 C410,121 415,117 419,119"/>
-      </g>
-      <g class="w-vtx w-v2" style="animation-delay:-1.6s">
-        <path d="M410,172 C422,177 431,170 428,161 C425,153 414,152 411,159 C409,164 414,168 418,166"/>
-      </g>
-    </g>
-
-    <!-- vignette -->
     <rect width="440" height="260" fill="url(#w-vig)"/>
 
-    <text x="20" y="240" fill="#a9e4f7" fill-opacity="0.55" font-size="9" letter-spacing="2.2"
-      font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">ORCINUS ORCA</text>
-    <text x="420" y="240" text-anchor="end" fill="#a9e4f7" fill-opacity="0.38" font-size="9" letter-spacing="1.4"
-      font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">Re ≈ 10⁷</text>
   </g>
 
   <rect x="0.5" y="0.5" width="439" height="259" rx="19.5" fill="none" stroke="#ffffff" stroke-opacity="0.09"/>
