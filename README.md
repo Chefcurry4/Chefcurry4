@@ -1,8 +1,8 @@
 ### Hi there 👋 I'm Massimo and I really like: 
 
 | CFD | AI | Basketball |
-| :--- | :----: | ----: |
-| <a href="https://github.com/Chefcurry4"><img src="killer-whale-1.svg" width="300" alt="Animated orca gliding through deep water, with streamlines wrapping its body and vortices shedding from its fluke tips" /></a> | <a href="https://github.com/Chefcurry4"><img src="ai_system.svg" width="300" alt="Animated neural network running a forward pass into a labelled softmax" /></a> | <a href="https://github.com/Chefcurry4"><img src="basketball.svg" width="300" alt="Animated jump shot arcing on a parabola and dropping through the net for a swish" /></a>
+| :---: | :---: | :---: |
+| <a href="https://github.com/Chefcurry4"><img src="killer-whale-1.svg" width="250" alt="Animated orca cruising through dark water: marine snow parts around its body and its flukes shed a reverse von Karman vortex street, counter-clockwise cores on top and clockwise below" /></a> | <a href="https://github.com/Chefcurry4"><img src="ai_system.svg" width="250" alt="Animated neural network untangling two interleaved spirals: each layer warps the space until a single straight line separates the two classes" /></a> | <a href="https://github.com/Chefcurry4"><img src="basketball.svg" width="250" alt="Animated catch-and-shoot three: the shooter rises, the ball flies a true parabola with backspin and swishes through a snapping net" /></a>
 
 ---
 
